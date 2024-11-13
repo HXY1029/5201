@@ -11,8 +11,8 @@ from folium.plugins import Search
 st.set_page_config(page_title="DSS5201 Data visualization", layout="wide")   
 st.header("This is our group's interactive visualization")
 
-map_data = pd.read_csv("../data/data_for_map.csv")
-line_data = pd.read_csv("../data/line_data.csv")
+map_data = pd.read_csv("/data/data_for_map.csv")
+line_data = pd.read_csv("/data/line_data.csv")
 
 
 # (1) Map Visualization
