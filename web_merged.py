@@ -11,12 +11,12 @@ from folium.plugins import Search
 st.set_page_config(page_title="DSS5201 Data visualization", layout="wide")   
 st.header("This is our group's interactive visualization")
 
-map_data = pd.read_csv("/data/data_for_map.csv")
-line_data = pd.read_csv("/data/line_data.csv")
+map_data = pd.read_csv("data_for_map.csv")
+line_data = pd.read_csv("line_data.csv")
 
 
 # (1) Map Visualization
-world = gpd.read_file("../data/wk11_worldmap.geojson")
+world = gpd.read_file("wk11_worldmap.geojson")
 g = world.merge(map_data, how="left", left_on="SOVEREIGNT", right_on="Country")
 g["Cumulative production"] = g["Cumulative production"].fillna(0)
 
